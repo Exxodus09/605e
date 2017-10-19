@@ -1,0 +1,15 @@
+{% include 'partials/header.html' %}
+  <h1>
+    DAT605 Group E
+  </h1>
+<hr>
+  <ul>
+  {% for post in posts %}
+    <li>
+      <a href="{% url 'single' post.id %}">
+        {{post.id}} - {{post.title}}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% include 'partials/footer.html' %}
